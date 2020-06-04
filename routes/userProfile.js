@@ -3,8 +3,10 @@ const path = require('path');
 const express = require('express');
 const router = express.Router();
 
+const rootDir = require('../util/path');
+
 router.get('/edit-profile', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'userProfile', 'editProfile', 'editProfile.html'));
+    res.sendFile(path.join(rootDir, 'views', 'userProfile', 'editProfile', 'editProfile.html'));
 });
 
 router.post('/edit-profile', (req, res) => {
@@ -13,7 +15,7 @@ router.post('/edit-profile', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'userProfile', 'profile', 'profile.html'));
+    res.sendFile(path.join(rootDir, 'views', 'userProfile', 'profile', 'profile.html'));
 });
 
 

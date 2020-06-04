@@ -1,10 +1,9 @@
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const express = require('express');
 const app = express();
 const port = 3000;
-
-const bodyParser = require('body-parser');
 
 const profileRoutes = require('./routes/userProfile');
 const homeRoutes = require('./routes/home');
