@@ -27,11 +27,11 @@
             <table>
                 <tr>
                     <td><label>Email</label></td>
-                    <td><input type="email" name="email" placeholder="Enter Email Here"></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter Email Here"></td>
                 </tr>
                 <tr>
                     <td><label>Password</label></td>
-                    <td><input type="password" name="password" placeholder="Please Enter Password Here"></td>
+                    <td><input type="password" name="password" id="password" placeholder="Please Enter Password Here"></td>
                 </tr>
                 <tr>
                     <td><button>Login</button></td>
@@ -41,4 +41,14 @@
         </form>
     </main>
 </body>
+<script>
+    var text = '{"persondata":[' +
+    '{"firstName":"John","lastName":"Doe", "email":"deathshadowshane@gmail.com" },' +
+    '{"firstName":"Anna","lastName":"Smith", "email":"test@gmail.com" },' +
+    '{"firstName":"Peter","lastName":"Jones", "email":"test2@gmail.com" }]}';
+    
+    obj = JSON.parse(text);
+    document.getElementById("email2").innerHTML =
+    obj.persondata[1].firstName + " " + obj.persondata[1].email;
+    </script>
 </html>
